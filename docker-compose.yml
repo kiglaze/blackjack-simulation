@@ -5,3 +5,11 @@ services:
     container_name: blackjack-rules
     ports:
       - "8001:8000"
+  simulation-service:
+    build:
+      context: ./simulation-service
+    container_name: blackjack-simulation
+    ports:
+      - "8002:8000"
+    depends_on:
+      - rules-service
