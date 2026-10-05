@@ -1,0 +1,7 @@
+services:
+  rules-service:
+    build:
+      context: ./rules-service
+    container_name: blackjack-rules
+    ports:
+      - "8001:8000"
